@@ -14,13 +14,13 @@ class ProductTest < ActiveSupport::TestCase
                           description: "yyy",
                           image_url: "zzz.jpg")
     product.price = -1
-    assert product.valid?, product.errors[:price].join(';')
+    assert product.invalid?
     assert_equal "must be greater than or equal to 0.01", 
       product.errors[:price].join(';')
   
   product.price = 1
   assert product.valid?
- # assert_equal "must be greater than or equal to 0.01", 
+  #assert_equal "must be greater than or equal to 0.01", 
         product.errors[:price].join(';')
       
       

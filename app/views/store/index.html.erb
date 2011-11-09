@@ -8,7 +8,7 @@
 		<h3><%= p.title %></h3>
 		<%= sanitize(p.description) %>
 		<div class="price_line">
-			<span class="price"><%= p.price %></span>
+			<span class="price"><%= number_to_currency(p.price) %></span>
 		</div>
 	<div>
 <%end%>
