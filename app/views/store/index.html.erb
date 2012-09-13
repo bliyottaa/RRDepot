@@ -1,7 +1,7 @@
 <% if notice %>
 <p id="notice"><%= notice%></p>
 <% end %>
-<h1>Your catalog</h1>
+<h1>Your catalog in a petty way</h1>
 <% @products.each do |p| %>
 	<div class = "entry">
 		<%=image_tag(p.image_url)%>
